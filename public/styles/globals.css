@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "./normalize.css";
+
+:root {
+  /* --background: #ffffff;
+  --foreground: #171717; */
+  --tg-viewport-height: 100vh;
+  --tg-viewport-stable-height: 100vh;
+  --border-glass: linear-gradient(
+    135deg,
+    rgba(187, 55, 254, 0.8) 0%,
+    rgba(187, 55, 254, 0.4) 40%,
+    transparent 60%,
+    rgba(107, 60, 234, 0.4) 70%,
+    rgba(107, 60, 234, 0.8) 100%
+  );
+  --prize-card-gradient: radial-gradient(circle, #006fff33, #00020633);
+  --inactive-grey: #6b7280;
+  --hovered-grey: #9ca3af;
+  scrollbar-width: none;
+}
+
+@theme inline {
+  --color-main-background: var(--main-background);
+  --color-background: var(--background);
+  --color-secondary-background: var(--secondary-background);
+  --color-foreground: var(--foreground);
+  --color-inactive-grey: var(--inactive-grey);
+  --color-hovered-grey: var(--hovered-grey);
+  --color-ton-blue: var(--ton-blue);
+  --color-blue: var(--blue);
+  --color-dark-blue: var(--dark-blue);
+  --color-semitransparent-black: var(--semitransparent-black);
+  --color-secondary-text-color: var(--secondary-text-color);
+  --color-prize-card-background: var(--prize-card-background);
+  --color-case-wrapper-background: var(--case-wrapper-background);
+  --color-lighter-blue: var(--lighter-blue);
+  --color-case-background: var(--case-background);
+  --color-item-blue: var(--item-blue);
+  --color-item-purple: var(--item-purple);
+  --color-item-orange: var(--item-orange);
+  --color-item-gold-border: var(--item-gold-border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-background: #040517;
+    --background: #000510;
+    --secondary-background: #080b16;
+    --foreground: #ededed;
+    --secondary-text-color: #070708;
+    --semitransparent-black: #1d1d1d66;
+    --ton-blue: #0098ea;
+    --blue: #009dff;
+    --dark-blue: #2441f8;
+    --lighter-blue: #354dff;
+    --prize-card-background: #03070f;
+    --case-background: #ffffff29;
+    --case-wrapper-background: #ffffff0a;
+
+    --item-gold-border: #ffe1b2;
+    --item-blue: #2441f845;
+    --item-purple: #643eb03b;
+    --item-orange: #ffa60030;
+    --item-gold: linear-gradient(
+      180deg,
+      rgba(255, 190, 77, 0.34) 0%,
+      rgba(255, 226, 146, 0.34) 100%
+    );
+    --border-glass: linear-gradient(
+      135deg,
+      rgba(187, 55, 254, 0.8) 0%,
+      rgba(187, 55, 254, 0.4) 40%,
+      transparent 60%,
+      rgba(107, 60, 234, 0.4) 70%,
+      rgba(107, 60, 234, 0.8) 100%
+    );
+    --prize-card-gradient: radial-gradient(circle, #006fff33, #00020633);
+  }
+}

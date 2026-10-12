@@ -1,0 +1,71 @@
+stages:
+  - build
+  - deploy
+  - deploy-prod
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKERHUB_USERNAME: $DOCKER_HUB_USERNAME
+  DOCKERHUB_PASSWORD: $DOCKER_HUB_ACCESS_TOKEN
+  DOCKERHUB_REPO: $CI_PROJECT_NAMESPACE-$CI_PROJECT_NAME
+  DOCKER_COMPOSE_CONTAINER_NAME: "frontend"
+  SSH_PRIVATE_KEY: $SSH_KEY_DEPLOY
+  SERVER_IP: $SERVER_IP
+
+services:
+  - docker:dind
+
+build:
+  stage: build
+
+  before_script:
+    - if [ -n "$ENV_FILE" ]; then cp "$ENV_FILE" .env.local; fi
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+  script:
+    - IMAGE_NAME="$CI_PROJECT_PATH/$CI_COMMIT_REF_SLUG"
+    - docker build -t "$CI_REGISTRY/$IMAGE_NAME:$CI_COMMIT_SHORT_SHA" -t "$CI_REGISTRY/$IMAGE_NAME:latest" -f "./Dockerfile" .
+    - docker push "$CI_REGISTRY/$IMAGE_NAME:$CI_COMMIT_SHORT_SHA"
+    - docker push "$CI_REGISTRY/$IMAGE_NAME:latest"
+
+  only:
+    - stage
+
+build-prod:
+  stage: build
+
+  before_script:
+    - if [ -n "$ENV_FILE_PROD" ]; then cp "$ENV_FILE_PROD" .env.local; fi
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+  script:
+    - IMAGE_NAME="$CI_PROJECT_PATH/$CI_COMMIT_REF_SLUG"
+    - docker build -t "$CI_REGISTRY/$IMAGE_NAME:$CI_COMMIT_SHORT_SHA" -t "$CI_REGISTRY/$IMAGE_NAME:latest" -f "./Dockerfile" .
+    - docker push "$CI_REGISTRY/$IMAGE_NAME:$CI_COMMIT_SHORT_SHA"
+    - docker push "$CI_REGISTRY/$IMAGE_NAME:latest"
+
+  only:
+    - production
+
+deploy:
+  stage: deploy
+  script:
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | base64 -d > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
+    - |
+      ssh -o LogLevel=QUIET -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no root@$SERVER_IP <<EOL
+       set -e
+       if ! command -v docker &> /dev/null; then
+           echo "Docker could not be found"
+           exit 1
+       fi
+       
+       if [ ! -f /root/docker-compose.yml ]; then
+           echo "docker-compose.yml not found"
+           exit 1
+       fi
+       docker-compose -f /root/docker-compose.yml pull $DOCKER_COMPOSE_CONTAINER_NAME
+       docker-compose -f /root/docker-compose.yml up --no-deps -d $DOCKER_COMPOSE_CONTAINER_NAME
+       docker system prune -f
+  only:
+    - stage

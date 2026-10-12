@@ -1,0 +1,194 @@
+{
+  "pages": {
+    "case-id": {
+      "not-available": "Case data is not available"
+    }
+  },
+  "components": {},
+  "entities": {},
+  "features": {
+    "confirm-sell-dialog": {
+      "title": "Confirm sale",
+      "description": "Are you sure you want to sell",
+      "for": "for",
+      "btns": {
+        "cancel": "Cancel",
+        "confirm": "Confirm"
+      },
+      "toast": {
+        "success": "Sale completed successfully",
+        "error": "Failed to sell"
+      }
+    },
+    "inventory-item-drawer": {
+      "sell-all": {
+        "title": "Sell all",
+        "description": "Are you sure you want to sell all items?",
+        "btns": {
+          "cancel": "Cancel",
+          "sell": "Sell"
+        },
+        "toast": {
+          "success": "Items sold successfully",
+          "error": "Failed to sell"
+        }
+      },
+      "span": {
+        "price": "Price",
+        "drop-rate": "Drop chance",
+        "commision": "Withdraw commission"
+      },
+      "btns": {
+        "withdraw": "Withdraw",
+        "sell": "Sell"
+      },
+      "successful_withdrawal": "Withdrawal request in processing",
+      "withdrawal_failed": "Failed to withdraw",
+      "successfully_sold": "Successfully sold",
+      "sell_failed": "Failed to sell item"
+    },
+    "settings-drawer": {
+      "title": "Settings",
+      "language": "Language",
+      "ui": "Select interface language"
+    },
+    "payment-drawer": {
+      "title": "Deposit",
+      "balance": "Balance top-up",
+      "toast": {
+        "success": "Transaction sent successfully. Wait for confirmation.",
+        "error": "Failed to send transaction"
+      },
+      "payment-form": {
+        "min": "Min. amount:",
+        "max": "Max. amount:",
+        "income": "To receive:",
+        "btns": {
+          "cancel": "Cancel",
+          "deposit": "Deposit"
+        }
+      }
+    },
+    "level-drawer": {
+      "title": "Referral system levels"
+    },
+    "spinners-results-wrapper": {
+      "title": "Congratulations!",
+      "value": "Total value:",
+      "again": "Open again",
+      "sell": "Sell",
+      "toast": {
+        "success": "Sale completed successfully"
+      }
+    },
+    "inventory-error": {
+      "title": "Inventory unavailable",
+      "btns": {
+        "cases": "Cases",
+        "send-gifts": "Send gifts"
+      }
+    },
+    "empty-inventory": {
+      "title": "Your inventory is empty",
+      "btns": {
+        "cases": "Cases",
+        "send-gifts": "Send gifts"
+      }
+    },
+    "locale-switcher": {
+      "ru": "Russian",
+      "en": "English"
+    }
+  },
+  "shared": {
+    "level-card": {
+      "rank": "Beginner",
+      "medal": "Bronze",
+      "income": "from net income",
+      "or": "or"
+    },
+    "sets-card-item": {
+      "cases": {
+        "title": "Cases",
+        "desc": "Open cases and get prizes"
+      },
+      "upgrade": {
+        "title": "Upgrade",
+        "desc": "Upgrade gifts"
+      },
+      "pvp": {
+        "title": "PvP Arena",
+        "desc": "Battle with other players"
+      }
+    }
+  },
+  "widgets": {
+    "transaction-wrapper": {
+      "title": "Transaction history",
+      "empty": "No transactions",
+      "item": {
+        "payment": "Payment",
+        "refund": "Refund"
+      }
+    },
+    "referral-link-wrapper": {
+      "title": "Referral link",
+      "btn": "Take profit",
+      "empty": {
+        "no-balance": "No available balance",
+        "invite": "Earn more by inviting friends"
+      },
+      "card": {
+        "available": "Available balance",
+        "total": "Total earned"
+      }
+    },
+    "referral-wrapper": {
+      "title": "Referrals",
+      "card": {
+        "total": "Total referrals",
+        "activity": "Activity",
+        "totalBalance": "Total earned"
+      }
+    },
+    "case-roulette": {
+      "open": "Open",
+      "for": "for",
+      "demo": "Demo",
+      "isSpinning": "Spinning..."
+    },
+    "loot-list": {
+      "title": "Possible prizes"
+    },
+    "header": {
+      "wallet": "Connected wallet",
+      "ton-btn-connect": "Connect wallet",
+      "ton-btn-disconnect": "Disconnect wallet"
+    },
+    "navbar": {
+      "inventory": "Inventory",
+      "home": "Cases",
+      "profile": "Profile"
+    }
+  },
+  "referral": {
+    "novice": "Level 1",
+    "bronze": "Level 2",
+    "silver": "Level 3",
+    "gold": "Level 4",
+    "platinum": "Level 5",
+    "diamond": "Level 6",
+    "profit": "from profit"
+
+  },
+  "toasts": {
+    "copy": "Copied",
+    "success": "Success"
+  },
+  "levels": {
+    "level": "Level"
+  },
+  "errors": {
+    "not-enough-tokens": "Not enough TON"
+  }
+}

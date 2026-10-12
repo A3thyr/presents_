@@ -1,0 +1,215 @@
+{
+  "pages": {
+    "case-id": {
+      "not-available": "Данные о кейсах не доступны"
+    }
+  },
+  "components": {},
+  "entities": {},
+  "features": {
+    "confirm-sell-dialog": {
+      "title": "Подтвердить продажу",
+      "description": "Вы действительно хотите продать",
+      "for": "за",
+      "btns": {
+        "cancel": "Отмена",
+        "confirm": "Подтвердить"
+      },
+      "toast": {
+        "success": "Продажа прошла успешно",
+        "error": "Не удалось продать"
+      }
+    },
+    "sort-inventory": {
+      "title-search-placeholder": "Поиск по названию",
+      "price-search-placeholder": "Цена"
+    },
+    "inventory-item": {
+      "open": "Крутить кейс",
+      "gift": "Подарить"
+    },
+    "case-collection-toggle": {
+      "title": "LIVE Лента",
+      "all": "Все",
+      "free": "Бесплатные",
+      "limited": "Лимитированные",
+      "allin": "ALL OR NOTHING"
+    },
+    "inventory-item-drawer": {
+      "sell-all": {
+        "title": "Продать все",
+        "description": "Вы действительно хотите продать все предметы?",
+        "btns": {
+          "cancel": "Отмена",
+          "sell": "Продать"
+        },
+        "toast": {
+          "success": "Предметы успешно проданы",
+          "error": "Не удалось продать предметы"
+        }
+      },
+      "span": {
+        "in-your-inv": "в вашем инвентаре",
+        "from-case": "Из кейса",
+        "price": "Общая стоимость",
+        "drop-rate": "Шанс дропа",
+        "commision": "Комиссия вывода"
+      },
+      "btns": {
+        "sell": "Вывести",
+        "open": "Открыть кейс еще раз"
+      },
+      "successful_withdrawal": "Заявка на вывод в обработке",
+      "withdrawal_failed": "Не удалось вывести",
+      "successfully_sold": "Успешно продано",
+      "sell_failed": "Не удалось продать предмет"
+    },
+    "settings-drawer": {
+      "title": "Настройки",
+      "language": "Язык",
+      "ui": "Выберите язык интерфейса"
+    },
+    "payment-drawer": {
+      "toast": {
+        "success": "Транзакция отправлена успешно. Ожидайте подтверждения.",
+        "error": "Не удалось отправить транзакцию"
+      },
+      "title": "Пополнить",
+      "balance": "Пополнение баланса",
+      "payment-form": {
+        "min": "Мин. сумма:",
+        "max": "Макс. сумма:",
+        "income": "К получению:",
+        "btns": {
+          "cancel": "Отмена",
+          "deposit": "Пополнить"
+        }
+      }
+    },
+    "level-drawer": {
+      "title": "Уровни реферальной системы"
+    },
+    "spinners-results-wrapper": {
+      "title": "Поздравляем!",
+      "in-your-inv": "теперь в вашем инвентаре",
+      "value": "Общая стоимость:",
+      "again": "Открыть кейс ещё раз",
+      "sell": "Продать",
+      "toast": {
+        "success": "Продажа прошла успешно"
+      }
+    },
+    "inventory-error": {
+      "title": "Инвентарь недоступен",
+      "btns": {
+        "cases": "Кейсы",
+        "send-gifts": "Отправить подарки"
+      }
+    },
+    "empty-inventory": {
+      "title": "Инвентарь пуст :(",
+      "any-gifts": "Есть подарки в Telegram?",
+      "add-gifts": "Добавьте их через бота и пополните профиль!",
+      "btns": {
+        "cases": "Открыть кейсы",
+        "send-gifts": "Добавить подарки"
+      }
+    },
+    "locale-switcher": {
+      "ru": "Русский",
+      "en": "English"
+    }
+  },
+  "shared": {
+    "level-card": {
+      "rank": "Новичок",
+      "medal": "Бронза",
+      "income": "от чистого дохода",
+      "or": "или"
+    },
+    "sets-card-item": {
+      "cases": {
+        "title": "Кейсы",
+        "desc": "Открывай кейсы и получай призы"
+      },
+      "upgrade": {
+        "title": "Апгрейд",
+        "desc": "Улучшай подарки"
+      },
+      "pvp": {
+        "title": "PvP-Арена",
+        "desc": "Сражайся с другими игроками"
+      }
+    }
+  },
+  "widgets": {
+    "transaction-wrapper": {
+      "title": "История транзакций",
+      "empty": "Нет транзакций",
+      "item": {
+        "payment": "Оплата",
+        "refund": "Возврат"
+      }
+    },
+    "referral-link-wrapper": {
+      "title": "Реферальная ссылка",
+      "btn": "Получить баланс",
+      "empty": {
+        "no-balance": "Нет доступного баланса",
+        "invite": "Зарабатывай больше, приглашая друзей"
+      },
+      "card": {
+        "available": "Доступный баланс",
+        "total": "Всего заработано"
+      }
+    },
+    "referral-wrapper": {
+      "title": "Рефералы",
+      "card": {
+        "total": "Всего рефералов",
+        "activity": "Активность",
+        "totalBalance": "Всего заработано"
+      }
+    },
+    "case-roulette": {
+      "open": "Открыть",
+      "for": "за",
+      "demo": "Демо",
+      "isSpinning": "Крутим..."
+    },
+    "loot-list": {
+      "title": "Призы в кейсе"
+    },
+    "header": {
+      "wallet": "Подключенный кошелёк",
+      "ton-btn-connect": "Подключить кошелёк",
+      "ton-btn-disconnect": "Отключить кошелёк"
+    },
+    "navbar": {
+      "inventory": "Инвентарь",
+
+      "home": "Кейсы",
+
+      "profile": "Профиль"
+    }
+  },
+  "referral": {
+    "novice": "Уровень 1",
+    "bronze": "Уровень 2",
+    "silver": "Уровень 3",
+    "gold": "Уровень 4",
+    "platinum": "Уровень 5",
+    "diamond": "Уровень 6",
+    "profit": "от чистого дохода"
+  },
+  "toasts": {
+    "copy": "Скопировано",
+    "success": "Успешно"
+  },
+  "levels": {
+    "level": "Уровень"
+  },
+  "errors": {
+    "not-enough-tokens": "Недостаточно TON для вывода"
+  }
+}
